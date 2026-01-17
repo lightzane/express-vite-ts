@@ -15,13 +15,15 @@ async function start() {
     configFile: path.join(process.cwd(), 'vite.config.ts'),
   })
 
+  // ! MUST COME FIRST before all api endpoints, so it can parse req.body
+  app.use(express.json()) // For parsing application/json
+
   // ! [IMPORTANT] Define API endpoints above catch-all middleware
   // ! so that API routes are registered first
   // catch-all middleware = (app.use(async (req, res) => {...}) / See (vite-index-html.ts))
   API_ENDPOINTS(app)
 
   app.use(vite.middlewares)
-  app.use(express.json()) // For parsing application/json
 
   // ! DO NOT let Express serve static files
   // app.use(express.static('public')) // ❌

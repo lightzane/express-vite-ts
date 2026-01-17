@@ -4,6 +4,13 @@
 import axios from 'axios'
 
 export async function hello() {
-  const result = await axios.get('/api/hello')
+  const name = (document.title = 'Express + Vite + TypeScript')
+
+  const result = await axios.post('/api/hello', {
+    name,
+  })
+
   console.log(result.data)
+
+  return result.data.message
 }

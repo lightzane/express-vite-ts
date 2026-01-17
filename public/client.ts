@@ -4,5 +4,5 @@ import { hello } from '~/examples/hello'
 document.addEventListener('DOMContentLoaded', start)
 
 async function start() {
-  hello()
+  document.querySelector('h1').textContent = await hello()
 }
