@@ -12,6 +12,7 @@ async function start() {
   const vite = await createViteServer({
     root: path.join(process.cwd(), 'public'), // Set Vite root to 'public' directory
     server: { middlewareMode: true },
+    configFile: path.join(process.cwd(), 'vite.config.ts'),
   })
 
   // ! [IMPORTANT] Define API endpoints above catch-all middleware
