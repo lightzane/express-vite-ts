@@ -1,13 +1,7 @@
 {
-  "compilerOptions": {
-    "esModuleInterop": true,
-    "noEmitOnError": true,
-    "removeComments": true,
-    "resolveJsonModule": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "~/*": ["public/*"]
-    }
-  }
+  "files": [], // Explicitly empty to avoid including any files by default and prevents warning: must have setting "composite": true on referenced projects.
+  "references": [
+    { "path": "./tsconfig.server.json" },
+    { "path": "./tsconfig.client.json" }
+  ]
 }

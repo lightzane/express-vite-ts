@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.server.json",
+  "compilerOptions": {
+    // "moduleResolution": "bundler", // Vite prefers "bundler" resolution
+    "lib": ["esnext", "dom", "webworker"]
+    // "noEmit": true // Vite handles the build, not tsc
+  },
+  "include": ["public/**/*.ts"] // "env.d.ts" (if any)
+}

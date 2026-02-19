@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    // "target": "esnext", // Use the latest JavaScript features
+    // "module": "esnext", // Use ES modules for better tree-shaking and modern syntax
+    // "moduleResolution": "node", // Resolve modules like Node.js does
+    "lib": ["esnext"], // Node doesn't have a DOM
+
+    "esModuleInterop": true,
+    "noEmitOnError": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "~/*": ["public/*"]
+    }
+  },
+  "include": ["src/**/*.ts"]
+}
